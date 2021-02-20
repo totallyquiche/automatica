@@ -28,7 +28,7 @@ final class Autoloader
      *
      * @return void
      */
-    public function __construct(array $vendor_namespaces = [], string $base_file_path = './')
+    public function __construct(array $vendor_namespaces = [], string $base_file_path = __DIR__)
     {
         $this->vendor_namespaces = $vendor_namespaces;
         $this->base_file_path = $base_file_path;
