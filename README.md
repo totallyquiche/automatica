@@ -38,3 +38,40 @@ $autoloader = new Autoloader(
 
 $autoloader->register();
 ```
+
+## Example
+
+Filesystem:
+
+```
+./index.php
+./Autoloader.php
+./Vendor/
+     Utility.php
+```
+`Utility.php`
+
+```php
+<?php declare(strict_types=1);
+
+namespace Some\Vendor;
+
+final class Utility
+{
+    //
+}
+```
+
+`index.php`:
+
+```php
+<?php declare(strict_types=1);
+
+require_once('Autoloader.php');
+
+(new TotallyQuiche\Automatica\Autoloader(
+    ['Some\Vendor' => 'Vendor']
+))->register();
+
+new Some\Vendor\Utility;
+```
