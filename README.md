@@ -3,17 +3,13 @@ Automática is a PSR-4 compliant autoloader.
 
 ## Usage
 
-In your `index.php` or bootstrap file, create a new instance of `Autoloader` and
-call the `register()` method.
+Load `Autoloader.php`, create a new instance of `Autoloader`, and call the `register()`
+method.
 
 ```php
-<?php declare(strict_types=1);
-
-use TotallyQuiche\Automatica\Autoloader;
-
 require_once('Autoloader.php');
 
-(new Autoloader)->register();
+(new TotallyQuiche\Automatica\Autoloader)->register();
 ```
 
 You can provide a mapping of vendor namespace prefixes to the corresponding file
